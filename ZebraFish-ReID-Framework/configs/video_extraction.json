@@ -1,0 +1,12 @@
+{
+  "yolo_model": "models/yolov8_zebrafish.pt",
+  "conf_side": 0.7,
+  "sample_stride": 10,
+  "max_frames_per_fish": 120,
+  "blur_thresh": 3.0,
+  "dedup_mae": 0.08,
+  "margin_ratio": 0.20,
+  "use_enhance": true,
+  "clip_limit": 2.0,
+  "imgsz": 1920
+}
