@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Runtime outputs and generated datasets
+data/
+
+# Database runtime files: keep only SQLite DBs and the latest evaluation CSV.
+database/*
+!database/*.db
+!database/video_vs_photo_gallery_results.csv
+!database/video_queries/
+database/video_queries/*
+!database/video_queries/video_vs_photo_identity_results_robust_side.csv
+
+# Local model weights are distributed through GitHub Releases.
+models/*.pth
+models/*.pt
+
+# Local/editor files
+.DS_Store
+Thumbs.db

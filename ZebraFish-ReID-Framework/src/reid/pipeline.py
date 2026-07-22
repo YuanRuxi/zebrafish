@@ -88,9 +88,9 @@ def extract_dataset(enhanced_dir=ENHANCED_DIR, extractor=None, blur_map=None):
       {fish_id, cam, frame, fname, feat(np.ndarray[3840]), blur}
     """
     # 已带 c1/c2 的文件（ReID 真正使用的）
-    RECORD_RE = re.compile(r'^(\d{4})_c([12])s(\d)_(\d{4})\.png$', re.IGNORECASE)
+    RECORD_RE = re.compile(r'^(\d{4})_c([12])s(\d)_(\d{4})\.(png|jpg|jpeg)$', re.IGNORECASE)
     # 无左右标记、有意遗留的 s-only 文件（不参与 ReID，非错误）
-    S_ONLY_RE = re.compile(r'^(\d{4})_s(\d)_(\d{4})\.png$', re.IGNORECASE)
+    S_ONLY_RE = re.compile(r'^(\d{4})_s(\d)_(\d{4})\.(png|jpg|jpeg)$', re.IGNORECASE)
     if extractor is None:
         extractor = ZebraFishFeatureExtractor()
     if blur_map is None:
